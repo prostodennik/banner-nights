@@ -1,0 +1,366 @@
+:root {
+  --w: 160px;
+  --h: 600px;
+  --main: #74ce04;
+  --time: 12s; }
+
+body {
+  margin: 0;
+  padding: 0;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  position: relative;
+  cursor: pointer; }
+  body:after {
+    content: "";
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    left: 0;
+    top: 0;
+    z-index: 0;
+    border: 4px solid #fff;
+    box-sizing: border-box; }
+
+a {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: var(--w);
+  height: var(--h);
+  overflow: hidden;
+  display: block;
+  position: relative;
+  background: var(--main); }
+
+.bg {
+  position: absolute;
+  width: var(--w);
+  height: var(--h);
+  left: 0;
+  top: 0;
+  z-index: 0; }
+  .bg_1 {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0;
+    animation: infinite ease-out bg_1 var(--time) 0s running; }
+@keyframes bg_1 {
+  0%,
+      23.33% {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0; }
+  33.33% {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    left: -378px;
+    top: 0;
+    z-index: 0; }
+  56.66% {
+    opacity: 1; }
+  66.66% {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    left: -378px;
+    top: 0;
+    z-index: 0;
+    opacity: 0; }
+  89.99% {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0;
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+  .bg_2 {
+    position: absolute;
+    width: var(--w);
+    height: var(--h);
+    left: 0;
+    top: auto;
+    z-index: -1;
+    bottom: 0; }
+@keyframes bg_2 {
+  0%,
+      23.33%,
+      100% {
+    bottom: 0; }
+  33.33%,
+      56.66% {
+    bottom: 0; }
+  66.66%,
+      89.99% {
+    bottom: 146px; } }
+  .bg_lights {
+    opacity: 0;
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0;
+    animation: bg_lights var(--time) infinite running; }
+@keyframes bg_lights {
+  23.33% {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0;
+    opacity: 1; }
+  29% {
+    opacity: 0; }
+  33.33% {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    left: -378px;
+    top: 0;
+    z-index: 0;
+    opacity: 0; }
+  45.66% {
+    opacity: 1; }
+  53% {
+    opacity: 1; }
+  70% {
+    opacity: 0; }
+  89.99% {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    left: -378px;
+    top: 0;
+    z-index: 0;
+    opacity: 0; }
+  100% {
+    position: absolute;
+    width: 900px;
+    height: 600px;
+    left: -10px;
+    top: -6px;
+    z-index: 0;
+    opacity: 0; } }
+.content {
+  position: absolute;
+  width: var(--w);
+  height: 128px;
+  left: 0;
+  top: 72px;
+  z-index: 0;
+  background: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation: infinite ease-out content var(--time) 0s running; }
+@keyframes content {
+  0%,
+    23.33%,
+    100% {
+    height: 128px;
+    top: 72px; }
+  33.33%,
+    56.66% {
+    height: 160px;
+    top: 176px; }
+  66.66%,
+    89.99% {
+    height: 146px;
+    top: 450px; } }
+.green {
+  position: absolute;
+  width: 160px;
+  height: 124px;
+  left: 4px;
+  top: 2px;
+  z-index: 1;
+  background: var(--main);
+  overflow: hidden;
+  animation: infinite ease-out green var(--time) 0s running; }
+@keyframes green {
+  0%,
+    23.33%,
+    100% {
+    top: 2px;
+    left: 4px;
+    height: 124px; }
+  33.33%,
+    56.66% {
+    top: 88px;
+    height: 70px; }
+  66.66%,
+    89.99% {
+    top: 52px;
+    height: 92px; } }
+.white {
+  position: absolute;
+  width: 0;
+  height: 160px;
+  left: 4px;
+  top: 2px;
+  z-index: 0;
+  background: #fff;
+  overflow: hidden;
+  animation: infinite ease-out white var(--time) 0s running; }
+@keyframes white {
+  0%,
+    23.33%,
+    100% {
+    height: 160px;
+    width: 0; }
+  33.33%,
+    56.66% {
+    width: 160px;
+    height: 80px; }
+  66.66%,
+    89.99% {
+    height: 54px;
+    width: 160px; } }
+/*
+
+/ 0
+\ 23.3
+/ 33.33
+\ 56.6
+/ 66.66
+\ 89.9
+100
+
+ */
+.word_1 {
+  position: absolute;
+  width: 125px;
+  height: 60px;
+  left: 16px;
+  top: 20px;
+  z-index: 0;
+  animation: infinite ease-out word_1 var(--time) 0s running; }
+@keyframes word_1 {
+  0%,
+      23.33%,
+      100% {
+    opacity: 1;
+    filter: blur(0); }
+  33.33%,
+      56.66% {
+    opacity: 0;
+    filter: blur(5px); }
+  66.66%,
+      89.99% {
+    opacity: 0;
+    filter: blur(5px); } }
+.word_22 {
+  position: absolute;
+  width: 126px;
+  height: auto;
+  left: 9px;
+  top: 18px;
+  z-index: 0;
+  animation: infinite ease-out word_22 var(--time) 0s running; }
+@keyframes word_22 {
+  0%,
+      23.33%,
+      100% {
+    opacity: 0;
+    filter: blur(5px); }
+  33.33%,
+      56.66% {
+    opacity: 1;
+    filter: blur(0); }
+  66.66%,
+      89.99% {
+    opacity: 0;
+    filter: blur(5px); } }
+.word_32 {
+  position: absolute;
+  width: 118px;
+  height: 38px;
+  left: 10px;
+  top: 30px;
+  z-index: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: infinite ease-out word_32 var(--time) 0s running; }
+@keyframes word_32 {
+  0%,
+      23.33%,
+      100% {
+    opacity: 0;
+    filter: blur(5px); }
+  33.33%,
+      56.66% {
+    opacity: 0;
+    filter: blur(5px); }
+  66.66%,
+      89.99% {
+    opacity: 1;
+    filter: blur(0); } }
+.word_21 {
+  position: absolute;
+  width: 94px;
+  height: 63px;
+  left: 16px;
+  top: 9px;
+  z-index: 0;
+  animation: infinite ease-out word_21 var(--time) 0s running; }
+@keyframes word_21 {
+  0%,
+      23.33%,
+      100% {
+    opacity: 0;
+    filter: blur(1px); }
+  33.33%,
+      56.66% {
+    opacity: 1;
+    filter: blur(0); }
+  66.66%,
+      89.99% {
+    opacity: 0;
+    filter: blur(1px); } }
+.word_31 {
+  position: absolute;
+  width: 125px;
+  height: 30px;
+  left: 8px;
+  top: 10px;
+  z-index: 0;
+  animation: infinite ease-out word_31 var(--time) 0s running; }
+@keyframes word_31 {
+  0%,
+      23.33%,
+      100% {
+    opacity: 0;
+    filter: blur(1px); }
+  33.33%,
+      56.66% {
+    opacity: 0;
+    filter: blur(1px); }
+  66.66%,
+      89.99% {
+    opacity: 1;
+    filter: blur(0); } }
+.logo {
+  position: absolute;
+  width: 125px;
+  height: 25px;
+  left: 0;
+  top: 24px;
+  z-index: 100;
+  right: 0;
+  margin: 0 auto; }
+
+/*# sourceMappingURL=style.css.map */
